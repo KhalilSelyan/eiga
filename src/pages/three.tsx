@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import Link from "next/link";
 import React from "react";
 import { Cube } from "../components/Cube";
+import Screen from "../components/Screen";
 
 const Three = () => {
   return (
@@ -25,6 +26,7 @@ const Three = () => {
         <OrbitControls />
         <pointLight intensity={1.0} position={[5, 3, 5]} />
         <Cube />
+        <Screen />
       </Canvas>
     </>
   );

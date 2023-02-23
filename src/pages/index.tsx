@@ -20,6 +20,15 @@ const Home: NextPage = () => {
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
           </h1>
+          <div>
+            <video
+              className="w-full max-w-[800px] rounded-xl"
+              src="https://gogodownload.net/download.php?url=aHR0cHM6LyAdrefsdsdfwerFrefdsfrersfdsrfer363435349AdeqwrwedffryretgsdFrsftrsvfsfsr1d3VieHNoMXAzLmdvY2RuYW5pLmNvbS91c2VyMTM0Mi81NWI5ZmVlZWE2YzJjY2NhOGM4NmI3NjdjMzFiMDU1YS9FUC41LnYwLjE2NzI1NzAyMTkuMTA4MHAubXA0P3Rva2VuPUhlZGFfWjdYcWJ3UV9lejJUVDd0OFEmZXhwaXJlcz0xNjcyNTkyMTU2JmlkPTE5NzA2MyZ0aXRsZT0oMTkyMHgxMDgwLWdvZ29hbmltZSlnb2t1c2h1ZnVkb3Utc2Vhc29uLTItZXBpc29kZS01Lm1wNA=="
+              autoPlay
+              loop
+              controls
+            />
+          </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
@@ -61,7 +70,7 @@ const AuthShowcase: React.FC = () => {
 
   const { data: secretMessage } = trpc.auth.getSecretMessage.useQuery(
     undefined, // no input
-    { enabled: sessionData?.user !== undefined },
+    { enabled: sessionData?.user !== undefined }
   );
 
   return (
